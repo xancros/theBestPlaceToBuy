@@ -1,0 +1,13 @@
+package com.TheBestPlaceToBuy.TheBestPlaceToBuy;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class TheBestPlaceToBuyApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(TheBestPlaceToBuyApplication.class, args);
+	}
+
+}
