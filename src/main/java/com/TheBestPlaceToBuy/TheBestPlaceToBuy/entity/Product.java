@@ -11,10 +11,12 @@ public class Product {
      @GeneratedValue(strategy = GenerationType.AUTO)
      private Long id;
      @NotBlank
-     private final String name;
+     private String name;
      private int category;
      private float price;
      private int visibility;
+
+    public Product(){}
 
     public Product(String name) {
         this.name = name;
@@ -32,6 +34,22 @@ public class Product {
         this.category = category;
         this.price = price;
         this.visibility = visibility;
+    }
+
+    public Product(Long id, @NotBlank String name, int category, float price, int visibility) {
+        this.id = id;
+        this.name = name;
+        this.category = category;
+        this.price = price;
+        this.visibility = visibility;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public int getCategory() {
