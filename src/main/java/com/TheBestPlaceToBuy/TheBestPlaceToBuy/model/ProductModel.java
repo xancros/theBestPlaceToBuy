@@ -1,5 +1,7 @@
 package com.TheBestPlaceToBuy.TheBestPlaceToBuy.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.validation.constraints.NotBlank;
 
 public class ProductModel {
@@ -10,19 +12,12 @@ public class ProductModel {
     private int visibility;
 
 
-    public ProductModel(String name, int category, float price, int visibility) {
+    public ProductModel(@JsonProperty("name") String name, @JsonProperty("category") int category, @JsonProperty("price") float price, @JsonProperty("visibility") int visibility) {
         this.name = name;
         this.category = category;
         this.price = price;
         this.visibility = visibility;
     }
-
-   /* public ProductModel(String name, int category, float price) {
-        this.name = name;
-        this.category = category;
-        this.price = price;
-        this.visibility = 0;
-    }*/
 
     public String getName() {
         return name;
