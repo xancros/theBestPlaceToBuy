@@ -45,4 +45,11 @@ public class ProductController {
     public Product findProductById(@PathVariable("id") Long id){
         return productService.getProductById(id).orElse(null);
     }
+
+    @GetMapping(path = "/findProduct&name={name}")
+    public Product findProductByName(@PathVariable("name") String name){
+        return productService.getProductByName(name).orElse(null);
+    }
+
+
 }

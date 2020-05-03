@@ -33,5 +33,7 @@ public class ProductService {
     public Iterable<Product> getAllProducts(){return productRepository.findAll();}
 
 
-
+    public Optional<Product> getProductByName(String name) {
+        return productRepository.findByName(name);
+    }
 }
